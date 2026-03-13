@@ -1,11 +1,11 @@
 body{
-font-family: Arial, sans-serif;
-max-width: 900px;
-margin: auto;
-padding: 20px;
-line-height: 1.6;
-background-color: #f4f6f8;
-color: #2c3e50;
+  font-family: Arial, sans-serif;
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  line-height: 1.6;
+  background-color: #f4f6f8;
+  color: #2c3e50;
 }
 
 .contenedor{
@@ -15,21 +15,22 @@ color: #2c3e50;
 
 .sidebar{
   position: fixed;
-  width:220px;
+  width: 220px;
   background: linear-gradient(to bottom, #2c3e50, #1a73e8);
-  color:white;
-  padding:30px;
-  height:100vh;
+  color: white;
+  padding: 20px;
+  height: 100vh;
   border-radius: 10px;
   box-shadow: inset -2px 0 5px rgba(0,0,0,0.2);
 }
 
 .sidebar a{
-  color:white;
-  text-decoration:none;
+  color: white;
+  text-decoration: none;
 }
+
 .contenido{
-  margin-left: 240px;
+  margin-left: 240px; /* 220px sidebar + 20px separación */
   flex: 1;
   padding: 40px;
   max-width: 900px;
