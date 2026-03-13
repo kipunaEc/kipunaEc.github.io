@@ -29,6 +29,7 @@ color: #2c3e50;
   text-decoration:none;
 }
 .contenido{
+  margin-left: 240px;
   flex: 1;
   padding: 40px;
   max-width: 900px;
