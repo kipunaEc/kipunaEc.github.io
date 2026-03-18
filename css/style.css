@@ -58,9 +58,6 @@ body {
   flex: 1;
   padding: 30px;
   background: #f3f4f6;
-
-  /* efecto panel */
-  display: flex;
 }
 
 .contenido > * {
