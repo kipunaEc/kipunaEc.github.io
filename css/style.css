@@ -4,9 +4,9 @@
   box-sizing: border-box;
 }
 
-body{
+body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f9fafb;
+  background-color: #f3f4f6; /* gris suave tipo SaaS */
   color: #2c3e50;
 }
 
@@ -20,6 +20,12 @@ body{
   background: #111827;
   color: #fff;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar h2 {
+  margin-bottom: 25px;
 }
 
 .sidebar ul {
@@ -38,7 +44,7 @@ body{
   text-decoration: none;
   padding: 10px;
   border-radius: 8px;
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
 .sidebar a:hover {
@@ -46,8 +52,20 @@ body{
   color: #fff;
   transform: translateX(5px);
 }
-.contenido{
+
+.contenido {
   flex: 1;
-  padding: 40px;
-  background: #f9fafb;
+  padding: 30px;
+  background: #f3f4f6;
+
+  /* efecto panel */
+  display: flex;
+}
+
+.contenido > * {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
