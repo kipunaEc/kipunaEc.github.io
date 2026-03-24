@@ -1,4 +1,4 @@
-fetch('components/sidebar.html')
+fetch('../components/sidebar.html')
   .then(res => {
     if (!res.ok) {
       throw new Error("No se pudo cargar el sidebar");
