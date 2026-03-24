@@ -1,20 +1,24 @@
+/* ===== RESET ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ===== BODY ===== */
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f3f4f6; /* gris suave tipo SaaS */
+  background-color: #f3f4f6;
   color: #2c3e50;
 }
 
+/* ===== LAYOUT ===== */
 .contenedor {
   display: flex;
   height: 100vh;
 }
 
+/* ===== SIDEBAR ===== */
 .sidebar {
   width: 250px;
   background: #111827;
@@ -29,6 +33,7 @@ body {
   text-align: center;
 }
 
+/* ===== MENU ===== */
 .sidebar ul {
   list-style: none;
 }
@@ -54,14 +59,15 @@ body {
   transform: translateX(5px);
 }
 
+/* ===== SOCIAL ===== */
 .sidebar-socials {
   margin-top: auto; 
   padding-top: 20px;
   border-top: 1px solid #2c3e50;
-}   
+}
 
+/* ===== CONTENIDO ===== */
 .contenido {
   flex: 1;
   padding: 30px;
-  background: #f3f4f6;
 }
