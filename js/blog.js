@@ -1,5 +1,10 @@
 fetch('data/blog/posts.json')
-  .then(res => res.json())
+  .then(res => {
+    if (!res.ok) {
+      throw new Error("No se pudo cargar posts.json");
+    }
+    return res.json();
+  })
   .then(posts => {
     const lista = document.getElementById("lista-posts");
 
@@ -8,4 +13,7 @@ fetch('data/blog/posts.json')
       li.innerHTML = `<a href="post.html?post=${post.archivo}">${post.titulo}</a>`;
       lista.appendChild(li);
     });
+  })
+  .catch(error => {
+    console.error(error);
   });
