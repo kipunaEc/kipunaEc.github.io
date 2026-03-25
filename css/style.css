@@ -27,11 +27,14 @@ body {
   padding: 20px;
   display: flex;
   flex-direction: column;
+  
 }
 
 .sidebar h2 {
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   text-align: center;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
 .logo img {
