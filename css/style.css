@@ -129,19 +129,26 @@ body {
 }
 
 /* ===== 12. RESPONSIVE ===== */
-
 /* Tablets y móviles (pantallas menores a 1024px) */
 @media (max-width: 1024px) {
+  
+  /* Fuerza que el contenedor ocupe todo el ancho */
+  .contenedor {
+    display: block;
+    height: auto;
+    min-height: 100vh;
+  }
   
   /* Ocultar sidebar por defecto */
   #sidebar {
     position: fixed;
-    left: -250px;
+    left: -280px;
     top: 0;
     height: 100vh;
-    width: 250px;
+    width: 280px;
     z-index: 1000;
     transition: left 0.3s ease;
+    overflow-y: auto;
   }
 
   /* Cuando tiene la clase "active", se muestra */
@@ -159,23 +166,26 @@ body {
     color: white;
     border: none;
     font-size: 1.5rem;
-    padding: 10px 15px;
+    padding: 12px 18px;
     border-radius: 8px;
     cursor: pointer;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
   }
 
-  /* Contenido ocupa toda la pantalla */
+  /* Contenido principal ocupa todo el ancho */
   .contenido {
     width: 100%;
     padding: 20px;
-    margin-top: 60px;
+    margin-top: 70px;
+    margin-left: 0;
   }
 
-  /* Ajustes del sidebar cuando está visible */
+  /* Ajustes del contenido insertado */
   .sidebar {
     height: 100%;
-    overflow-y: auto;
   }
 
   .sidebar ul {
@@ -186,15 +196,26 @@ body {
     flex-direction: column;
     margin-top: auto;
   }
-
-  .sidebar-socials h3 {
-    display: block;
-  }
 }
 
 /* Escritorio (mayor a 1024px) */
 @media (min-width: 1025px) {
   .menu-btn {
     display: none;
+  }
+  
+  .contenedor {
+    display: flex;
+    height: 100vh;
+  }
+  
+  #sidebar {
+    position: relative;
+    left: 0 !important;
+    width: 250px;
+  }
+  
+  .contenido {
+    margin-top: 0;
   }
 }
