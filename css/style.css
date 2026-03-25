@@ -129,80 +129,72 @@ body {
 }
 
 /* ===== 12. RESPONSIVE ===== */
-/* Tablets (pantallas menores a 768px) */
+
+/* Tablets y móviles (pantallas menores a 768px) */
 @media (max-width: 768px) {
-  .contenedor {
-    flex-direction: column;  /* Sidebar arriba, contenido abajo */
-  }
-
+  
+  /* Ocultar sidebar por defecto */
   #sidebar {
+    position: fixed;
+    left: -250px;
+    top: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 1000;
+    transition: left 0.3s ease;
+  }
+
+  /* Cuando tiene la clase "active", se muestra */
+  #sidebar.active {
+    left: 0;
+  }
+
+  /* Botón menú hamburguesa */
+  .menu-btn {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1001;
+    background: #111827;
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: block;
+  }
+
+  /* Contenido ocupa toda la pantalla */
+  .contenido {
     width: 100%;
-    height: auto;
-    padding: 15px;
+    padding: 20px;
+    margin-top: 60px;
   }
 
+  /* Ajustes del sidebar cuando está visible */
   .sidebar {
-    flex-direction: row !important;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .logo img {
-    width: 50px;
-    height: 50px;
-  }
-
-  .sidebar h2 {
-    margin-bottom: 0;
-    font-size: 1.2rem;
+    height: 100%;
+    overflow-y: auto;
   }
 
   .sidebar ul {
-    display: flex;
-    gap: 15px;
-  }
-
-  .sidebar li {
-    margin-bottom: 0;
-  }
-
-  .descripcion {
-    display: none;  /* Oculta descripción en móvil para ahorrar espacio */
+    flex-direction: column;
   }
 
   .sidebar-socials {
-    margin-top: 0;
-    padding-top: 10px;
-    flex-direction: row;
-    gap: 20px;
+    flex-direction: column;
+    margin-top: auto;
   }
 
   .sidebar-socials h3 {
-    display: none;
-  }
-
-  .contenido {
-    padding: 20px;
+    display: block;
   }
 }
 
-/* Celulares pequeños (menores a 480px) */
-@media (max-width: 480px) {
-  .sidebar ul {
-    gap: 10px;
-  }
-
-  .sidebar a {
-    padding: 6px 10px;
-    font-size: 0.85rem;
-  }
-
-  .contenido {
-    padding: 15px;
-  }
-
-  .contenido h1 {
-    font-size: 1.5rem;
+/* Escritorio (mayor a 768px) */
+@media (min-width: 769px) {
+  .menu-btn {
+    display: none;
   }
 }
