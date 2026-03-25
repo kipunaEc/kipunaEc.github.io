@@ -39,7 +39,8 @@ body {
   height: 90px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid #ddd;
+  border: 3px solid #ffffff;
+
 }
 
 .logo {
