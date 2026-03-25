@@ -78,6 +78,11 @@ body {
   transform: translateX(5px);
 }
 
+.sidebar a.active {
+  background: #2563eb;
+  color: #fff;
+}
+
 /* ===== SOCIAL ===== */
 .sidebar-socials {
   margin-top: auto; 
