@@ -44,7 +44,22 @@ body {
   border: 3px solid #ffffff;
 }
 
-/* ===== 6. TÍTULO DEL SIDEBAR ===== */
+/* ===== 6. DESCRIPCIÓN DEBAJO DEL AVATAR ===== */
+.descripcion {
+  text-align: center;
+  margin: 12px 0 20px 0;
+  padding: 0 8px;
+}
+
+.descripcion p {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  line-height: 1.4;
+  font-style: italic;
+  border-left: 2px solid #2563eb;
+  padding-left: 10px;
+}
+/* ===== 7. TÍTULO DEL SIDEBAR ===== */
 .sidebar h2 {
   margin-bottom: 15px;
   text-align: center;
@@ -52,7 +67,7 @@ body {
   letter-spacing: 1px;
 }
 
-/* ===== 7. MENÚ DE NAVEGACIÓN ===== */
+/* ===== 8. MENÚ DE NAVEGACIÓN ===== */
 .sidebar ul {
   list-style: none;
 }
@@ -83,7 +98,7 @@ body {
   color: #fff;
 }
 
-/* ===== 8. REDES SOCIALES ===== */
+/* ===== 9. REDES SOCIALES ===== */
 .sidebar-socials {
   margin-top: auto;
   padding-top: 20px;
@@ -99,13 +114,13 @@ body {
   font-weight: 600;
 }
 
-/* ===== 9. CONTENIDO PRINCIPAL ===== */
+/* ===== 10. CONTENIDO PRINCIPAL ===== */
 .contenido {
   flex: 1;
   padding: 30px;
 }
 
-/* ===== 10. CONTENIDO INSERTADO ===== */
+/* ===== 11. CONTENIDO INSERTADO ===== */
 .sidebar {
   display: flex;
   flex-direction: column;
