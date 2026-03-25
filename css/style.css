@@ -130,8 +130,8 @@ body {
 
 /* ===== 12. RESPONSIVE ===== */
 
-/* Tablets y móviles (pantallas menores a 768px) */
-@media (max-width: 768px) {
+/* Tablets y móviles (pantallas menores a 1024px) */
+@media (max-width: 1024px) {
   
   /* Ocultar sidebar por defecto */
   #sidebar {
@@ -192,8 +192,8 @@ body {
   }
 }
 
-/* Escritorio (mayor a 768px) */
-@media (min-width: 769px) {
+/* Escritorio (mayor a 1024px) */
+@media (min-width: 1025px) {
   .menu-btn {
     display: none;
   }
