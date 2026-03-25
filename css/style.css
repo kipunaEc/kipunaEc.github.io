@@ -1,25 +1,24 @@
-/* ===== RESET ===== */
+/* ===== 1. RESET ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ===== BODY ===== */
+/* ===== 2. BODY ===== */
 body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #f3f4f6;
   color: #2c3e50;
 }
 
-/* ===== LAYOUT ===== */
+/* ===== 3. LAYOUT PRINCIPAL ===== */
 .contenedor {
   display: flex;
   height: 100vh;
 }
 
-/* ===== SIDEBAR ===== */
-
+/* ===== 4. SIDEBAR (CONTENEDOR PRINCIPAL) ===== */
 #sidebar {
   width: 250px;
   background: #111827;
@@ -27,14 +26,13 @@ body {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  
 }
 
-.sidebar h2 {
+/* ===== 5. LOGO ===== */
+.logo {
+  display: flex;
+  justify-content: center;
   margin-bottom: 15px;
-  text-align: center;
-  font-weight: 600;
-  letter-spacing: 1px;
 }
 
 .logo img {
@@ -43,16 +41,17 @@ body {
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid #ffffff;
-
 }
 
-.logo {
-  display: flex;
-  justify-content: center;
+/* ===== 6. TÍTULO DEL SIDEBAR ===== */
+.sidebar h2 {
   margin-bottom: 15px;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
-/* ===== MENU ===== */
+/* ===== 7. MENÚ DE NAVEGACIÓN ===== */
 .sidebar ul {
   list-style: none;
 }
@@ -83,14 +82,23 @@ body {
   color: #fff;
 }
 
-/* ===== SOCIAL ===== */
+/* ===== 8. REDES SOCIALES ===== */
 .sidebar-socials {
-  margin-top: auto; 
+  margin-top: auto;
   padding-top: 20px;
   border-top: 1px solid #2c3e50;
 }
 
-/* ===== CONTENIDO ===== */
+.sidebar-socials h3 {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #6b7280;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+/* ===== 9. CONTENIDO PRINCIPAL ===== */
 .contenido {
   flex: 1;
   padding: 30px;
