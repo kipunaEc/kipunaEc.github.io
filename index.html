@@ -9,12 +9,14 @@
 </head>
 <body>
 
-  <!-- Sidebar igual a como lo tienes -->
+<div class="main-layout">
+  
+  <!-- COLUMNA 1: SIDEBAR (ocupa el vacío izquierdo) -->
   <aside class="sidebar">
-    <h2>Kipuna</h2>
     <div class="logo">
-      <img src="img/avatar.png" alt="Blog Kipuna">
+      <img src="img/avatar.png" alt="Kipuna">
     </div>
+    <h2>Kipuna</h2>
     <div class="descripcion">
       <p>Sitio web personal para compartir experimentos con Python</p>
     </div>
@@ -31,7 +33,7 @@
     </div>
   </aside>
 
-  <!-- Contenido principal -->
+  <!-- COLUMNA 2: CONTENIDO PRINCIPAL -->
   <main class="contenido">
     <ul class="posts-list">
       <li class="post-item">
@@ -39,9 +41,31 @@
         <span class="post-date">12 de mayo, 2026</span>
         <p class="post-excerpt">Un extracto del artículo para que el lector sepa de qué trata...</p>
       </li>
-      <!-- más posts aquí -->
+      <li class="post-item">
+        <h2 class="post-title"><a href="post.html">Python para principiantes</a></h2>
+        <span class="post-date">10 de mayo, 2026</span>
+        <p class="post-excerpt">Aprende Python desde cero con ejemplos prácticos...</p>
+      </li>
     </ul>
   </main>
+
+  <!-- COLUMNA 3: PUBLICIDAD -->
+  <aside class="publicidad">
+    <div class="ad-space">
+      <div class="ad-label">Patrocinio</div>
+      <div class="ad-content">
+        <p>🎯 Tu anuncio aquí<br><small>contacto@kipuna.ec</small></p>
+      </div>
+    </div>
+    <div class="ad-space" style="margin-top: 1rem;">
+      <div class="ad-label">Recomendado</div>
+      <div class="ad-content">
+        <p>📘 Curso de Python<br><small>Próximamente</small></p>
+      </div>
+    </div>
+  </aside>
+
+</div>
 
 </body>
 </html>
