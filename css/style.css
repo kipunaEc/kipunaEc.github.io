@@ -15,7 +15,7 @@ body {
 /* ===== 3. LAYOUT PRINCIPAL ===== */
 .contenedor {
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 /* ===== 4. SIDEBAR (CONTENEDOR PRINCIPAL) ===== */
@@ -131,13 +131,18 @@ body {
 /* ===== 12. RESPONSIVE ===== */
 /* Tablets y móviles (pantallas menores a 1024px) */
 @media (max-width: 1024px) {
-  
-  /* Fuerza que el contenedor ocupe todo el ancho */
   .contenedor {
     display: block;
-    height: auto;
-    min-height: 100vh;
+    min-height: 100vh;  /* cambia height auto por esto */
   }
+  
+  .contenido {
+    width: 100%;
+    padding: 20px;
+    margin-top: 70px;
+    margin-bottom: 30px;  /* AÑADE: espacio inferior */
+  }
+}
   
   /* Ocultar sidebar por defecto */
   #sidebar {
