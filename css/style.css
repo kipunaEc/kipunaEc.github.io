@@ -1,13 +1,10 @@
-/* ===== ESTILO "ALEGRE" - LIMPIO Y CENTRADO ===== */
-
-/* 1. RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* 2. VARIABLES */
+/* Variables */
 :root {
   --bg: #ffffff;
   --text: #1a1a1a;
@@ -17,74 +14,137 @@
   --link-hover: #000000;
 }
 
-/* 3. BASE */
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Georgia, 'Times New Roman', serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Georgia, serif;
   background: var(--bg);
   color: var(--text);
   line-height: 1.7;
   font-size: 18px;
-  padding: 2rem 1rem;
 }
 
-/* 4. CONTENEDOR PRINCIPAL (centrado) */
-.container {
-  max-width: 720px;
+/* ===== SIDEBAR (estilo Alegre, centrado) ===== */
+.sidebar {
+  max-width: 680px;
   margin: 0 auto;
-  padding: 0 1rem;
-}
-
-/* 5. HEADER / NAVEGACIÓN (horizontal, no sidebar) */
-.site-header {
+  padding: 3rem 1rem 1rem 1rem;
   text-align: center;
-  margin-bottom: 3rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid var(--border);
 }
 
-.site-title {
-  font-size: 2.2rem;
+/* Logo */
+.logo {
+  margin-bottom: 1rem;
+}
+
+.logo img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Título Kipuna */
+.sidebar h2 {
+  font-size: 2rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
+  letter-spacing: -0.5px;
 }
 
-.site-title a {
-  text-decoration: none;
-  color: var(--text);
+/* Descripción */
+.descripcion {
+  margin-bottom: 1.5rem;
 }
 
-.site-description {
+.descripcion p {
+  font-size: 0.9rem;
   color: var(--text-light);
-  font-size: 0.95rem;
-  margin-top: 0.25rem;
+  border-left: none;
+  padding-left: 0;
+  font-style: normal;
 }
 
-/* Menú horizontal */
-.main-nav {
-  margin-top: 1.5rem;
-}
-
-.main-nav ul {
+/* Menú de navegación (horizontal como Alegre) */
+.sidebar nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
   gap: 2rem;
   flex-wrap: wrap;
+  margin-bottom: 2rem;
 }
 
-.main-nav a {
+.sidebar nav a {
   text-decoration: none;
   color: var(--text-light);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   letter-spacing: 0.5px;
+  padding: 0;
+  background: none;
 }
 
-.main-nav a:hover {
+.sidebar nav a:hover {
+  background: none;
   color: var(--link-hover);
+  transform: none;
   text-decoration: underline;
 }
 
-/* 6. POSTS / ARTÍCULOS */
+.sidebar nav a.active {
+  background: none;
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* Íconos - mantener tamaño */
+.sidebar nav i {
+  margin-right: 6px;
+  font-size: 0.9rem;
+}
+
+/* Sección COMUNIDAD */
+.sidebar-socials {
+  margin-top: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.sidebar-socials h3 {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #9ca3af;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.sidebar-socials a {
+  display: inline-block;
+  margin: 0 0.75rem;
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 0.85rem;
+  padding: 0;
+  background: none;
+}
+
+.sidebar-socials a:hover {
+  background: none;
+  color: var(--link-hover);
+  transform: none;
+}
+
+.sidebar-socials i {
+  margin-right: 4px;
+}
+
+/* ===== CONTENIDO PRINCIPAL ===== */
+.contenido {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 1rem 4rem 1rem;
+}
+
+/* ===== POSTS (lista de artículos) ===== */
 .posts-list {
   list-style: none;
 }
@@ -121,23 +181,14 @@ body {
   font-size: 0.95rem;
 }
 
-/* 7. PÁGINAS INDIVIDUALES (post.html) */
+/* ===== CONTENIDO DE POST INDIVIDUAL ===== */
 .post-header {
   margin-bottom: 2rem;
-  text-align: center;
+  text-align: left;
 }
 
 .post-content {
   font-size: 1.05rem;
-}
-
-.post-content h2, 
-.post-content h3 {
-  margin: 1.5rem 0 0.75rem;
-}
-
-.post-content p {
-  margin-bottom: 1.25rem;
 }
 
 .post-content img {
@@ -146,43 +197,48 @@ body {
   margin: 1.5rem 0;
 }
 
-/* 8. FOOTER */
-.site-footer {
-  margin-top: 4rem;
-  padding-top: 2rem;
-  border-top: 1px solid var(--border);
-  text-align: center;
-  font-size: 0.8rem;
-  color: var(--text-light);
+.post-content h2, .post-content h3 {
+  margin: 1.5rem 0 0.75rem;
 }
 
-/* 9. RESPONSIVE */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 600px) {
   body {
     font-size: 16px;
-    padding: 1rem;
   }
   
-  .site-title {
-    font-size: 1.8rem;
+  .sidebar {
+    padding: 2rem 1rem 1rem;
+  }
+  
+  .sidebar h2 {
+    font-size: 1.6rem;
+  }
+  
+  .logo img {
+    width: 65px;
+    height: 65px;
+  }
+  
+  .sidebar nav ul {
+    gap: 1.25rem;
   }
   
   .post-title {
     font-size: 1.4rem;
   }
   
-  .main-nav ul {
-    gap: 1rem;
+  .contenido {
+    padding: 0 1rem 3rem 1rem;
   }
 }
 
-/* 10. HOME y otras utilidades */
-a {
-  color: var(--link);
+/* Utilidades */
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-hr {
-  border: none;
-  border-top: 1px solid var(--border);
-  margin: 2rem 0;
+a {
+  color: var(--link);
 }
