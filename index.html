@@ -1,28 +1,47 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="UTF-8">
-  <title>Kipuna EC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kipuna Ec</title>
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-
 <body>
-  <!-- BOTÓN MENÚ HAMBURGUESA -->
-  <button class="menu-btn" id="menuBtn">☰</button>
-  
-  <div class="contenedor">
-    <div id="sidebar"></div>
-    <main class="contenido">
-      <a href="index.html" class="active">Inicio</a>
-      <p>Bienvenido</p>
-    </main>
-  </div>
 
-<script src="js/main.js"></script>
-<script src="js/menu.js"></script>
+  <!-- Sidebar igual a como lo tienes -->
+  <aside class="sidebar">
+    <h2>Kipuna</h2>
+    <div class="logo">
+      <img src="img/avatar.png" alt="Blog Kipuna">
+    </div>
+    <div class="descripcion">
+      <p>Sitio web personal para compartir experimentos con Python</p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a></li>
+        <li><a href="blog.html"><i class="fa-brands fa-leanpub"></i> Aprende</a></li>
+      </ul>
+    </nav>
+    <div class="sidebar-socials">
+      <h3>COMUNIDAD</h3>
+      <a href="https://github.com/kipunaEc" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+      <a href="https://youtube.com/@kipunaEc" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+    </div>
+  </aside>
 
+  <!-- Contenido principal -->
+  <main class="contenido">
+    <ul class="posts-list">
+      <li class="post-item">
+        <h2 class="post-title"><a href="post.html">Mi primer artículo</a></h2>
+        <span class="post-date">12 de mayo, 2026</span>
+        <p class="post-excerpt">Un extracto del artículo para que el lector sepa de qué trata...</p>
+      </li>
+      <!-- más posts aquí -->
+    </ul>
+  </main>
 
 </body>
 </html>
