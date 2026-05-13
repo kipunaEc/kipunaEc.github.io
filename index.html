@@ -67,5 +67,44 @@
 
 </div>
 
+<!-- Botón de modo nocturno -->
+<button class="theme-toggle" id="themeToggle" aria-label="Cambiar modo oscuro/claro">
+  🌙
+</button>
+
+<script>
+  // Modo nocturno con localStorage
+  (function() {
+    const toggle = document.getElementById('themeToggle');
+    const root = document.documentElement;
+    
+    // Verificar preferencia guardada o del sistema
+    const savedTheme = localStorage.getItem('theme');
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+      root.setAttribute('data-theme', 'dark');
+      toggle.textContent = '☀️';
+    } else {
+      root.setAttribute('data-theme', 'light');
+      toggle.textContent = '🌙';
+    }
+    
+    // Toggle al hacer clic
+    toggle.addEventListener('click', () => {
+      const isDark = root.getAttribute('data-theme') === 'dark';
+      if (isDark) {
+        root.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+        toggle.textContent = '🌙';
+      } else {
+        root.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+        toggle.textContent = '☀️';
+      }
+    });
+  })();
+</script>
+
 </body>
 </html>
