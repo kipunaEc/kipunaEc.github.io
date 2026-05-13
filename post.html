@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cargando... - KipunaEc</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+
+<div class="main-layout">
+  
+  <aside class="sidebar">
+    <div class="logo">
+      <img src="img/avatar.png" alt="Kipuna">
+    </div>
+    <h2>Kipuna</h2>
+    <div class="descripcion">
+      <p>Sitio web personal para compartir experimentos con Python</p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a></li>
+        <li><a href="blog.html"><i class="fa-brands fa-leanpub"></i> Aprende</a></li>
+      </ul>
+    </nav>
+    <div class="sidebar-socials">
+      <h3>COMUNIDAD</h3>
+      <a href="https://github.com/kipunaEc" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+      <a href="https://youtube.com/@kipunaEc" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+    </div>
+  </aside>
+
+  <main class="contenido">
+    <article class="post-full">
+      <div id="post-content">
+        <div class="loading">📖 Cargando artículo...</div>
+      </div>
+    </article>
+  </main>
+
+  <aside class="publicidad">
+    <div class="ad-space">
+      <div class="ad-label">Patrocinio</div>
+      <div class="ad-content">
+        <p>🎯 Tu anuncio aquí<br><small>contacto@kipuna.ec</small></p>
+      </div>
+    </div>
+  </aside>
+
+</div>
+
+<button class="theme-toggle" id="themeToggle">🌙</button>
+<script src="js/main.js"></script>
+
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const slug = urlParams.get('id');
+  
+  if (slug) {
+    fetch(`posts/${slug}.md`)
+      .then(response => {
+        if (!response.ok) throw new Error('Post no encontrado');
+        return response.text();
+      })
+      .then(markdown => {
+        const html = marked.parse(markdown);
+        document.getElementById('post-content').innerHTML = html;
+        document.title = `${slug.replace(/-/g, ' ')} - KipunaEc`;
+      })
+      .catch(error => {
+        document.getElementById('post-content').innerHTML = `
+          <div style="text-align: center; padding: 3rem;">
+            <h2>😕 Post no encontrado</h2>
+            <p>El artículo que buscas no existe.</p>
+            <a href="index.html">← Volver al inicio</a>
+          </div>
+        `;
+      });
+  } else {
+    document.getElementById('post-content').innerHTML = `
+      <div style="text-align: center; padding: 3rem;">
+        <h2>📝 Selecciona un artículo</h2>
+        <p>Ve al <a href="index.html">inicio</a> para ver los posts disponibles.</p>
+      </div>
+    `;
+  }
+</script>
+
+</body>
+</html>
