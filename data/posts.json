@@ -1,0 +1,13 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Mi primer artículo",
+      "slug": "mi-primer-articulo",
+      "date": "2026-05-12",
+      "excerpt": "Un extracto del artículo para que el lector sepa de qué trata...",
+      "category": "Python",
+      "minutesRead": 5
+    }
+  ]
+}
